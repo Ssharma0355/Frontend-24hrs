@@ -23,10 +23,6 @@ function TodoList() {
             {data.map(d=>(
                 <h1 key={d.id}>{d.task} <button onClick={()=>{deleteTask(d.id)}}>Delete</button></h1>
             ))}
-
-            
-
-
         </div>
     </div>
   )
