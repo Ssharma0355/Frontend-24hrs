@@ -9,6 +9,8 @@ function TodoList() {
             task:tasks
         } ]))
         setTask("")
+        setTask("")
+
 
     }
     const deleteTask=(id)=>{
