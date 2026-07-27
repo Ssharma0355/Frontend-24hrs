@@ -9,9 +9,6 @@ function TodoList() {
             task:tasks
         } ]))
         setTask("")
-        setTask("")
-
-
     }
     const deleteTask=(id)=>{
         const filteredData = data.filter(data =>data.id !== id)
