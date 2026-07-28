@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import ShowList from './problems/ShowList'
 import TodoList from './problems/TodoList'
+import AutoSearch from './problems/AutoSearch'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
     {/* <ShowList /> */}
-    <TodoList />
+    {/* <TodoList /> */}
+    <AutoSearch />
     </>
   )
 }
