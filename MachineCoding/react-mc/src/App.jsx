@@ -7,6 +7,7 @@ import InfiniteScroll from './problems/infintieScroll/InfiniteScroll'
 import Pagination from './problems/Pagination/Pagination'
 import AppFile from './problems/ReUsableModal/AppFile'
 import VirtualScroll from './problems/VirtualScroll/VirtualScroll'
+import Carausel from './problems/Carausel/Carausel'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,8 @@ function App() {
     {/* <InfiniteScroll /> */}
     {/* <Pagination /> */}
     {/* <AppFile /> */}
-    <VirtualScroll />
+    {/* <VirtualScroll /> */}
+    <Carausel />
     </>
   )
 }
