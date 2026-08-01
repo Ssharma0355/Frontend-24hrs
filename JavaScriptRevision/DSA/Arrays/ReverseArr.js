@@ -24,3 +24,5 @@ while(i<j){
     j--;
 }
 console.log(arr)
+console.log(arr)
+
