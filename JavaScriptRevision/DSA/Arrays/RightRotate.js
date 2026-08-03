@@ -8,3 +8,4 @@ arr[i] = arr[i-1]
 }
 arr[0] = copy
 console.log(arr)
+xww
