@@ -8,6 +8,7 @@ import Pagination from './problems/Pagination/Pagination'
 import AppFile from './problems/ReUsableModal/AppFile'
 import VirtualScroll from './problems/VirtualScroll/VirtualScroll'
 import Carausel from './problems/Carausel/Carausel'
+import Document from './problems/MachineCoding/Document'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +22,8 @@ function App() {
     {/* <Pagination /> */}
     {/* <AppFile /> */}
     {/* <VirtualScroll /> */}
-    <Carausel />
+    {/* <Carausel /> */}
+    <Document />
     </>
   )
 }
