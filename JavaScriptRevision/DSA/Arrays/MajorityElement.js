@@ -1,3 +1,8 @@
+// find max majority element means 
+// if arrlength is 7 then 7/2 half it = 3
+// we need to find the element that occurs more then 3 
+//  like 2 occurs 4 times
+
 let arr = [2,2,1,1,1,2,2];
 let half = Math.floor(arr.length/2)
 let store = arr[0]
