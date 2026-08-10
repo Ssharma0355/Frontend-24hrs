@@ -2,29 +2,22 @@
 // if arrlength is 7 then 7/2 half it = 3
 // we need to find the element that occurs more then 3 
 //  like 2 occurs 4 times
+//  https://leetcode.com/problems/majority-element/submissions/2101338886/
 
 let arr = [2,2,1,1,1,2,2];
 let half = Math.floor(arr.length/2)
 let store = arr[0]
 let count = 1;
 for(let i = 1 ;i<arr.length;i++){
-    // we check the count and store is equal to current i
-    if( count !== 0 && store === arr[i]){
-        // then we increase the count
+    if(count === 0){
+        store = arr[i];
+        count =1;
+    }
+    else if(store === arr[i]){
         count++;
     }
-    else  if(count !== 0 && store !== arr[i]){
-        // we check the count and store not equal to current i
+    else{
         count--;
-        // we count -1;
     }
-    else if( count === 0 && store !== arr[i]){
-        // we check count is 0 and store is not equal to current i
-        store = arr[i];
-        // we replace store with i
-        count = 1;
-        // and increase the count
-    }
-   
 }
 console.log(store)
