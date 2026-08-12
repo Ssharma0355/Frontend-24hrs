@@ -25,7 +25,7 @@ function App() {
     {/* <VirtualScroll /> */}
     {/* <Carausel /> */}
     {/* <Document /> */}
-    <Counter />
+    <Counter intialcount={0} />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-function Counter() {
-    const [count, setCount] = useState(0)
+function Counter({intialcount}) {
+    const [count, setCount] = useState(intialcount)
     const increase=()=>{
         setCount(prev => prev+1)
     }
@@ -16,7 +16,7 @@ function Counter() {
     }
   return (
     <div>
-        <h1>{count}</h1>
+        <h1 data-testid="count">{count}</h1>
         <button onClick={increase}>Increase</button>
         <button onClick={decrease}>Decrease</button>
         <button onClick={reset}>Reset</button>
