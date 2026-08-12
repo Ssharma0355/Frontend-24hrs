@@ -9,6 +9,7 @@ import AppFile from './problems/ReUsableModal/AppFile'
 import VirtualScroll from './problems/VirtualScroll/VirtualScroll'
 import Carausel from './problems/Carausel/Carausel'
 import Document from './problems/MachineCoding/Document'
+import Counter from './testing/Counter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,8 @@ function App() {
     {/* <AppFile /> */}
     {/* <VirtualScroll /> */}
     {/* <Carausel /> */}
-    <Document />
+    {/* <Document /> */}
+    <Counter />
     </>
   )
 }
