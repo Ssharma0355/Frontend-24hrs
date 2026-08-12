@@ -8,7 +8,8 @@ function DocCard({id,title, user,userId, completed}) {
   }
     return (
     <div style={{border:"1px solid black",padding:"12px", borderRadius:"12px", margin:"12px", width:"200px"}}>
-      <input type="checkbox" checked={completed} /><p>{title}</p>
+      <input type="checkbox" checked={completed} />
+      <p>{title}</p>
        <p>Id: {id}</p>
         <p>User: {userId}</p>
         <p>Completed: {completed?"Completed":"Pending"}</p>

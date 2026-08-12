@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import DocCard from './DocCard';
+import DocSearch from './DocSearch';
 
 function Document() {
     const [data, setData] = useState([]);
@@ -30,6 +31,8 @@ function Document() {
 
   return (
     <div style={{margin:"12px"}}>
+        <DocSearch api={api} />
+        
         {data.map(d=>(
             <DocCard key={d.id} id={d.id} title={d.title} user={d.user} userId={d.userId} completed={d.completed}/>
         ))}
