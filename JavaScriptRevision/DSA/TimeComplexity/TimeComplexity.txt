@@ -9,3 +9,30 @@ Theta 0 -> Avereage
 Omega _()_ -> Best Case
 
 we always go with worst case Big O
+
+questions 
+// 0(n) single loop
+for(let i=0;i<n;i++){
+
+}
+
+// 0(n^2) nested loop
+for(let i=0;i<n;i++){
+     for(let j=0;j<n;j++){
+
+     }
+}
+// 0(log n) when n values reduced half or more
+for(let i=0;i<n/2;i++){
+
+}
+// space 0(1)
+   for(let j=0;j<n;j++){
+     sum+=1
+     }
+
+// space 0(n) if new array is added
+let arr = new Array()
+   for(let j=0;j<n;j++){
+     arr = sum+1
+     }
