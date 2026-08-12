@@ -1,0 +1,11 @@
+Time Complexity 
+
+
+Amount of time tken as the function of input size(n)
+
+3 things 
+Big O -> Worst base
+Theta 0 -> Avereage
+Omega _()_ -> Best Case
+
+we always go with worst case Big O
