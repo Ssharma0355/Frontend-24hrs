@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 function SearhAPI() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(null)
+    const [search, setSearch] = useState("")
     // spi => https://dummyjson.com/recipes/search?q=Margherita
     const getData = async ()=>{
         try{
@@ -23,13 +24,20 @@ function SearhAPI() {
         getData()
     },[])
 
+    const filtereddata = data.filter(f => f.name.toLowerCase().includes(search.toLowerCase()))
+
+
+
     if(loading){
         return <p>Loading</p>
     }
-    
+
   return (
     <div>
-        {data.map(food =>(
+        <div>
+            <input type="text" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+        </div>
+        {filtereddata.map(food =>(
             <li key={food.id}>{food.name}</li>
         ))}
       
