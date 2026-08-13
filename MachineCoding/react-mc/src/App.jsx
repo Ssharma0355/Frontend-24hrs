@@ -10,6 +10,7 @@ import VirtualScroll from './problems/VirtualScroll/VirtualScroll'
 import Carausel from './problems/Carausel/Carausel'
 import Document from './problems/MachineCoding/Document'
 import Counter from './testing/Counter'
+import Todo from './Quintype/Todo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +26,8 @@ function App() {
     {/* <VirtualScroll /> */}
     {/* <Carausel /> */}
     {/* <Document /> */}
-    <Counter intialcount={0} />
+    {/* <Counter intialcount={1} /> */}
+    <Todo />
     </>
   )
 }
