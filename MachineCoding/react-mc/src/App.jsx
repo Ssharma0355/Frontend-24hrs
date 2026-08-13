@@ -14,6 +14,8 @@ import Todo from './Quintype/Todo'
 import SearhAPI from './Quintype/SearhAPI'
 import Debounced from './Quintype/Debounced'
 import MainPage from './Quintype/page-nation/MainPage'
+import MainApp from './Quintype/addCart/MainApp'
+import FormValidation from './Quintype/FormValidation'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +35,9 @@ function App() {
     {/* <Todo /> */}
     {/* <SearhAPI /> */}
     {/* <Debounced /> */}
-    <MainPage />
+    {/* <MainPage /> */}
+    {/* <MainApp /> */}
+    <FormValidation />
     </>
   )
 }
