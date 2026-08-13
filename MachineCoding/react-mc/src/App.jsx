@@ -11,6 +11,7 @@ import Carausel from './problems/Carausel/Carausel'
 import Document from './problems/MachineCoding/Document'
 import Counter from './testing/Counter'
 import Todo from './Quintype/Todo'
+import SearhAPI from './Quintype/SearhAPI'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,7 +28,8 @@ function App() {
     {/* <Carausel /> */}
     {/* <Document /> */}
     {/* <Counter intialcount={1} /> */}
-    <Todo />
+    {/* <Todo /> */}
+    <SearhAPI />
     </>
   )
 }
