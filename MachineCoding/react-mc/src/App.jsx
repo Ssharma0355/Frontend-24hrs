@@ -13,6 +13,7 @@ import Counter from './testing/Counter'
 import Todo from './Quintype/Todo'
 import SearhAPI from './Quintype/SearhAPI'
 import Debounced from './Quintype/Debounced'
+import MainPage from './Quintype/page-nation/MainPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,7 +32,8 @@ function App() {
     {/* <Counter intialcount={1} /> */}
     {/* <Todo /> */}
     {/* <SearhAPI /> */}
-    <Debounced />
+    {/* <Debounced /> */}
+    <MainPage />
     </>
   )
 }
