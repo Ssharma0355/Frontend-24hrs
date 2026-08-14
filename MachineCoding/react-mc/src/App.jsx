@@ -16,6 +16,7 @@ import Debounced from './Quintype/Debounced'
 import MainPage from './Quintype/page-nation/MainPage'
 import MainApp from './Quintype/addCart/MainApp'
 import FormValidation from './Quintype/FormValidation'
+import MainCard from './Quintype/infyScroll/MainCard'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,7 +38,8 @@ function App() {
     {/* <Debounced /> */}
     {/* <MainPage /> */}
     {/* <MainApp /> */}
-    <FormValidation />
+    {/* <FormValidation /> */}
+    <MainCard />
     </>
   )
 }
