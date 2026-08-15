@@ -17,6 +17,7 @@ import MainPage from './Quintype/page-nation/MainPage'
 import MainApp from './Quintype/addCart/MainApp'
 import FormValidation from './Quintype/FormValidation'
 import MainCard from './Quintype/infyScroll/MainCard'
+import ParentTab from './problems/Tab-Form/ParentTab'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,7 +40,8 @@ function App() {
     {/* <MainPage /> */}
     {/* <MainApp /> */}
     {/* <FormValidation /> */}
-    <MainCard />
+    {/* <MainCard /> */}
+    <ParentTab />
     </>
   )
 }
