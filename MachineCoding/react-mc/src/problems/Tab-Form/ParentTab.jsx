@@ -8,6 +8,7 @@ function ParentTab() {
     const [data, setData] =useState({
         name:"", email:"", dob:"", password:""
     })
+    console.log(name)
 
     const config = [
         {
