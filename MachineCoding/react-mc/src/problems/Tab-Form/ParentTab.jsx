@@ -12,17 +12,17 @@ function ParentTab() {
 
     const config = [
         {
-            id:1,
+            id:0,
             name:"Name",
             component: PersonalInfo
         },
         {
-            id:2,
+            id:1,
             name:"Email",
             component: EmailInfor
         },
         {
-            id:3,
+            id:2,
             name:"dob",
             component: DateOfBirth
         }
@@ -33,7 +33,11 @@ function ParentTab() {
     const selectTab=(id)=>{
         setIndex(id)
     }
+    const nextTab =()=>{
+        setIndex(prev => prev+1)
+    }
 
+    console.log(config.length)
   return (
     <div>
         {config.map(c =>(
@@ -43,6 +47,10 @@ function ParentTab() {
         ))}
         <div>
         <CurrentTab data={data} setData={setData}/>
+        </div>
+        <div>
+            {index<config.length-1 ?<button onClick={nextTab}>Next</button>:<button onClick={nextTab}>Submit</button> }
+           
         </div>
     </div>
   )
