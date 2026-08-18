@@ -43,6 +43,8 @@ function ParentTab() {
         {config.map(c =>(
             <button key={c.id} onClick={()=>{selectTab(c.id)}} >
                 {c.name}
+                {c.name}
+
             </button>
         ))}
         <div>
