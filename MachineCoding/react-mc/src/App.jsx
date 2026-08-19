@@ -18,6 +18,7 @@ import MainApp from './Quintype/addCart/MainApp'
 import FormValidation from './Quintype/FormValidation'
 import MainCard from './Quintype/infyScroll/MainCard'
 import ParentTab from './problems/Tab-Form/ParentTab'
+import ProgressData from './problems/ProgressBar/ProgressData'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -41,7 +42,8 @@ function App() {
     {/* <MainApp /> */}
     {/* <FormValidation /> */}
     {/* <MainCard /> */}
-    <ParentTab />
+    {/* <ParentTab /> */}
+    <ProgressData />
     </>
   )
 }
