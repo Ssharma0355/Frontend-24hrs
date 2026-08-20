@@ -14,6 +14,7 @@ function InfiniteScroll() {
       }
         catch(err){
           console.log(err)
+          console.log(err)
         }
         finally{
           setLoading(false)
