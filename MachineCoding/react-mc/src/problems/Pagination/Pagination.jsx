@@ -5,7 +5,7 @@ function Pagination() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(null)
     const [intialPage, setInitialPage] = useState(1)
-
+    // https://onecompiler.com/react/44yss9jr9
 
     const getData = async () =>{
         try{
