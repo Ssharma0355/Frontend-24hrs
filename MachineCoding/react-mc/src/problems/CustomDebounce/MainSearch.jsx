@@ -18,9 +18,6 @@ function MainSearch() {
             try {
                 const getRes = await fetch(`https://dummyjson.com/recipes/search?q=${DebouncedValue}`)
                 const resJson = await getRes.json();
-                
-                // FIXED: Changed 'recipies' to 'recipes'
-                // Added a fallback to an empty array just in case
                 setData(resJson.recipes || [])
             } catch (error) {
                 console.error("Error fetching recipes:", error);
@@ -38,7 +35,6 @@ function MainSearch() {
             onChange={(e) => {setSearch(e.target.value)}} 
             placeholder="Search recipes..."
         />
-        {/* Safe mapping using optional chaining (?) */}
         {data?.map(d => (
             <div key={d.id}>{d.name}</div>
         ))}
