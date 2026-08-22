@@ -20,6 +20,7 @@ import MainCard from './Quintype/infyScroll/MainCard'
 import ParentTab from './problems/Tab-Form/ParentTab'
 import ProgressData from './problems/ProgressBar/ProgressData'
 import MainSearch from './problems/CustomDebounce/MainSearch'
+import MainFetch from './problems/CustomFetch/MainFetch'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,7 +46,8 @@ function App() {
     {/* <MainCard /> */}
     {/* <ParentTab /> */}
     {/* <ProgressData /> */}
-    <MainSearch />
+    {/* <MainSearch /> */}
+    <MainFetch />
     </>
   )
 }
