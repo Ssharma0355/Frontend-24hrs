@@ -7,21 +7,35 @@ function useFetch(url) {
 
 
     useEffect(()=>{
+        const controller = new AbortController();
+
         const getUser = async()=>{
             try{
                 setLoading(true)
-                const res = await fetch(url)
+                const res = await fetch(url,{
+                    signal:controller.signal
+                })
+                if (!res.ok) {
+                    throw new Error("Failed to fetch");
+                }
                 const resJosn = await res.json()
                 setData(resJosn.users ||[])
             }
             catch(err){
-                setError(err.message)
+                if (err.name === "AbortError") {
+                    console.log("Request cancelled");
+                    return;
+                }
+                setError(err.message);
             }
             finally{
                 setLoading(false)
             }
         }
         getUser()
+        return ()=>{
+            controller.abort();
+        }
     },[url])
     console.log(data)
   return {data, loading, error}

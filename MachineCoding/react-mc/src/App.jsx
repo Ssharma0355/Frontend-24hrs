@@ -17,10 +17,11 @@ import MainPage from './Quintype/page-nation/MainPage'
 import MainApp from './Quintype/addCart/MainApp'
 import FormValidation from './Quintype/FormValidation'
 import MainCard from './Quintype/infyScroll/MainCard'
-import ParentTab from './problems/Tab-Form/ParentTab'
 import ProgressData from './problems/ProgressBar/ProgressData'
 import MainSearch from './problems/CustomDebounce/MainSearch'
 import MainFetch from './problems/CustomFetch/MainFetch'
+import Throttling from './problems/Throttle/Throttling'
+import MainForm from './problems/Multi-Form/MainForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -47,7 +48,9 @@ function App() {
     {/* <ParentTab /> */}
     {/* <ProgressData /> */}
     {/* <MainSearch /> */}
-    <MainFetch />
+    {/* <MainFetch /> */}
+    {/* <Throttling /> */}
+    <MainForm />
     </>
   )
 }
