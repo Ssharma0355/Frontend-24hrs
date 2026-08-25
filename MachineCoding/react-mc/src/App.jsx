@@ -22,6 +22,7 @@ import MainSearch from './problems/CustomDebounce/MainSearch'
 import MainFetch from './problems/CustomFetch/MainFetch'
 import Throttling from './problems/Throttle/Throttling'
 import MainForm from './problems/Multi-Form/MainForm'
+import ServerUsers from './problems/Server-Pagination/ServerUsers'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -50,7 +51,8 @@ function App() {
     {/* <MainSearch /> */}
     {/* <MainFetch /> */}
     {/* <Throttling /> */}
-    <MainForm />
+    {/* <MainForm /> */}
+    <ServerUsers />
     </>
   )
 }
