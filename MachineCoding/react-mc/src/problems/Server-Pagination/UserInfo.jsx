@@ -1,6 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function UserInfo({userData}) {
+function UserInfo({userData,userId, setUserID, setUserData}) {
+    
+    useEffect(()=>{
+        const getUserInfo=async()=>{
+            const res = await fetch(`https://dummyjson.com/users/${userId}`)
+            const resJson = await res.json()
+            setUserData(resJson)
+        }
+        getUserInfo()
+    },[userId])
 
     return (
     <div>
