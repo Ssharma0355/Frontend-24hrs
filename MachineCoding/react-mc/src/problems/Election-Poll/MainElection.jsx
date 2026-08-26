@@ -17,11 +17,11 @@ function MainElection() {
     const getUsers = async()=>{
         try{
             setLoading(true)
-            const res = await fetch(`https://dummyjson.com/users?limit=${limit}&skip=${skip}&select=firstName,age`)
+            const res = await fetch(`https://dummyjson.com/users?limit=${limit}&skip=${skip}`)
             const resJson = await res.json()
             setData(resJson.users)
             setUserId(resJson.users[0].id)
-            setUserInfo(resJson.users[0])
+            // setUserInfo(resJson.users[0])
             setTotal(resJson.total)
         }
         catch(err){
@@ -58,9 +58,15 @@ const filteredData = data.filter(user => {
     return user.firstName && user.firstName.toLowerCase().includes(search.toLowerCase());
 });
 
+useEffect(()=>{
+    if(filteredData.length ===0){return}
+    setUserInfo(filteredData[0])
+},[filteredData])
 
 
-console.log(filteredData)
+
+
+console.log("1st",filteredData[0])
 
     if(isLoading) return <h1>Loading....</h1>
   return (
@@ -71,13 +77,14 @@ console.log(filteredData)
         </div>
         <div style={{display:"flex", flexDirection:"row"}}>
         <div>
-        {filteredData.map(d=>(
+        {filteredData.length === 0 ? <>No Data</>:filteredData.map(d=>(
             <CardidateList onClick={()=>{selectId(d.id)}} key={d.id} id={d.id}fname={d.firstName} lname={d.lastName} />
         ))}
         </div>
-        <div>
-            <CandidateDetails setUserId={setUserId} userId={userId} userInfo={userInfo} setUserInfo={setUserInfo}/>
-        </div>
+        <div>{filteredData.length === 0 ? <></>:
+            <CandidateDetails filteredData={filteredData} setUserId={setUserId} userId={userId} userInfo={userInfo} setUserInfo={setUserInfo}/>
+        }
+            </div>
         </div>
         <div style={{display:'flex'}}>
             <button disabled={skip==0} onClick={prevPage}>Previous</button>

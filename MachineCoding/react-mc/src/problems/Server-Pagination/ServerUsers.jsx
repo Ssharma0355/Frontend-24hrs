@@ -5,12 +5,12 @@ const UserInfo = lazy(()=>import("./UserInfo"))
 function ServerUsers() {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [userId, setUserID] = useState(1);
   const [userData, setUserData] = useState([]);
   const [limit, setLimit] = useState(10);
   const [skip, setSkip] = useState(0);
-  const [total, setTotal] = useState([]);
+  const [total, setTotal] = useState(0);
 
   const getData = async () => {
     try {
@@ -33,21 +33,26 @@ function ServerUsers() {
     getData();
   }, [skip]);
 
+  const currentPage = skip / limit;
   const totalNoPages = Math.ceil(total / limit);
 
-  const selectPage = (id) => {
-    setSkip(id);
+  // const selectPage = (id) => {
+  //   setSkip(id);
+  // };
+
+  const selectPage = (pageIndex) => {
+    setSkip(pageIndex * limit);
   };
 
   const selectUser=(id)=>{
     setUserID(id)
   }
-  const previous=()=>{
-    setSkip(prev => prev-1)
-  }
-  const next=()=>{
-    setSkip(prev => prev+1)
-  }
+  const previous = () => {
+    setSkip((prev) => Math.max(0, prev - limit));
+  };
+  const next = () => {
+    setSkip((prev) => prev + limit);
+  };
 
   if (isLoading) {
     return <p>Loading....</p>;
@@ -96,14 +101,14 @@ function ServerUsers() {
               padding: "5px",
               border: "1px solid black",
               margin: "4px",
-              backgroundColor: `${n === skip ? "red" : ""}`,
+              backgroundColor: `${n === currentPage ? "red" : ""}`,
             }}
             key={n}
           >
             {n + 1}
           </p>
         ))}
-        <button disabled={skip === totalNoPages-1} onClick={next}>Next</button>
+        <button disabled={currentPage === totalNoPages-1} onClick={next}>Next</button>
       </div>
     </div>
   );

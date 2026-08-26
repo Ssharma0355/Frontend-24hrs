@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Graph from './Graph'
 
-function CandidateDetails({setUserInfo, userInfo, userId}) {
+function CandidateDetails({setUserInfo, userInfo, userId,filteredData}) {
 
     const getUserInfo = async()=>{
         const getInfo = await fetch(`https://dummyjson.com/users/${userId}`)
