@@ -23,6 +23,7 @@ import MainFetch from './problems/CustomFetch/MainFetch'
 import Throttling from './problems/Throttle/Throttling'
 import MainForm from './problems/Multi-Form/MainForm'
 import ServerUsers from './problems/Server-Pagination/ServerUsers'
+import MainElection from './problems/Election-Poll/MainElection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -52,7 +53,8 @@ function App() {
     {/* <MainFetch /> */}
     {/* <Throttling /> */}
     {/* <MainForm /> */}
-    <ServerUsers />
+    {/* <ServerUsers /> */}
+    <MainElection />
     </>
   )
 }
