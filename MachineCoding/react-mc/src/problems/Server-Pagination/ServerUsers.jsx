@@ -106,6 +106,8 @@ function ServerUsers() {
             key={n}
           >
             {n + 1}
+            {n + 1}
+
           </p>
         ))}
         <button disabled={currentPage === totalNoPages-1} onClick={next}>Next</button>
