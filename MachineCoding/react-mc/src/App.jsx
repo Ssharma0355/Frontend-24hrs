@@ -26,6 +26,7 @@ import ServerUsers from './problems/Server-Pagination/ServerUsers'
 import MainElection from './problems/Election-Poll/MainElection'
 import MainChart from './problems/UsingCharts/MainChart'
 import MainExplore from './problems/FileExploer/MainExplore'
+import Practice from './practice/Practice'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -58,7 +59,8 @@ function App() {
     {/* <ServerUsers /> */}
     {/* <MainElection /> */}
     {/* <MainChart /> */}
-    <MainExplore />
+    {/* <MainExplore /> */}
+    <Practice />
     </>
   )
 }
