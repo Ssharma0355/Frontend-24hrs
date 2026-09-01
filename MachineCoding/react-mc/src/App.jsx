@@ -27,6 +27,7 @@ import MainElection from './problems/Election-Poll/MainElection'
 import MainChart from './problems/UsingCharts/MainChart'
 import MainExplore from './problems/FileExploer/MainExplore'
 import Practice from './practice/Practice'
+import Scrolly from './practice/Scrolly'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -60,7 +61,8 @@ function App() {
     {/* <MainElection /> */}
     {/* <MainChart /> */}
     {/* <MainExplore /> */}
-    <Practice />
+    {/* <Practice /> */}
+    <Scrolly />
     </>
   )
 }
