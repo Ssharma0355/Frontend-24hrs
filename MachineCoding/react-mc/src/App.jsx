@@ -28,6 +28,7 @@ import MainChart from './problems/UsingCharts/MainChart'
 import MainExplore from './problems/FileExploer/MainExplore'
 import Practice from './practice/Practice'
 import Scrolly from './practice/Scrolly'
+import RecursiveLogic from './problems/FileExploer/RecursiveLogic'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -62,7 +63,8 @@ function App() {
     {/* <MainChart /> */}
     {/* <MainExplore /> */}
     {/* <Practice /> */}
-    <Scrolly />
+    {/* <Scrolly /> */}
+    <RecursiveLogic />
     </>
   )
 }
