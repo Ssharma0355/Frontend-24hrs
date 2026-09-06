@@ -13,6 +13,7 @@ function OTP() {
     }
   return (
     <div>
+        <h1>Settle</h1>
         <h1>OTP Digit</h1>
         {/* ask interview for digit */}
         {otpArr.map((input, index)=>{
