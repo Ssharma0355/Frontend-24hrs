@@ -18,6 +18,7 @@ function MainCard() {
         }
         finally{
             setLoading(false)
+            // add a spinner here 
         }
     }
     useEffect(()=>{
