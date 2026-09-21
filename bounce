@@ -1,0 +1,51 @@
+import React from 'react';
+import { useState,useEffect } from 'react'
+
+function App() {
+  const [search, setSearch] = useState("")
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(null)
+  const [show, setShow] = useState(false)
+
+  // fetch 
+
+  const getData = async()=>{
+    try{
+      setLoading(true)
+      const res = await fetch(`https://dummyjson.com/recipes/search?q=${search}`)
+      const resjoson = await res.json();
+      setData(resjoson.recipes)
+    }
+    catch(err){
+      console.log(err);
+    }
+    finally{
+      setLoading(false);
+    }
+  }
+  // effect
+  useEffect(()=>{
+    
+    const timer = setTimeout(()=>{
+    getData()
+    }, 2000)
+
+    return()=>{clearTimeout(timer)}
+  }, [search])
+
+  return (
+    <div>
+    <input
+    onFocus={()=>{setShow(true)}}
+    onBlur={()=>{setShow(false)}}
+     value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+    {show &&    <div>
+    {data.map(d=>(
+      <div key={d.id}>{d.name}</div>
+    ))}
+    </div>}
+    </div>
+  )
+}
+
+export default App
