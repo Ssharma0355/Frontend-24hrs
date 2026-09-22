@@ -8,7 +8,7 @@ function App() {
   const [show, setShow] = useState(false)
 
   // fetch 
-
+   // get
   const getData = async()=>{
     try{
       setLoading(true)
