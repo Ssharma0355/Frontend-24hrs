@@ -32,6 +32,7 @@ function App() {
 
     return()=>{clearTimeout(timer)}
   }, [search])
+// practice coding questions
 
   return (
     <div>
